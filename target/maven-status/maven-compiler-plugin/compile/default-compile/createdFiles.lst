@@ -1,0 +1,7 @@
+com/test/sbd/service/BookService.class
+com/test/sbd/TestSpringbootBookdemoAppApplication.class
+com/test/sbd/repository/BookRepository.class
+com/test/sbd/controller/BookController.class
+com/test/sbd/model/CustomSequences.class
+com/test/sbd/model/Book.class
+com/test/sbd/service/SequenceGeneratorService.class

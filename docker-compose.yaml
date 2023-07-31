@@ -2,13 +2,15 @@ version: '3'
 services:
   mongodb:
     image: mongo
+    container_name: "mongodb"
     ports:
       - 27017:27017
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
-    container_name: "mongodb"
-    hostname: mongo
+      
+#Removed mongo-express entry <here> as it's redundant for this POC.
+
   sb-app:
     build: .
     container_name: "docker-sb-app"
@@ -17,6 +19,4 @@ services:
       - 5001:8181
     depends_on:
       - mongodb
-    environment:
-      WAIT_HOSTS: mongo:27017 
-   
+#Removed wait script entry. https://github.com/ufoscout/docker-compose-wait/blob/master/README.md
